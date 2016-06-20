@@ -1,6 +1,6 @@
 # The scripts for building the base images can be found in scripts/drone-images
 
-build:
+pipeline:
   flake8:
     image: python:3.5
     commands:
@@ -34,12 +34,12 @@ cache:
     - node_modules
     - /drone/pip-cache
 
-notify:
-  slack:
-    webhook_url: https://hooks.slack.com/services/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
-    channel: builds
-    username: drone
-    when:
-      success: true
-      failure: true
-      change: true
+#notify:
+#  slack:
+#    webhook_url: https://hooks.slack.com/services/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
+#    channel: builds
+#    username: drone
+#    when:
+#      success: true
+#      failure: true
+#      change: true
